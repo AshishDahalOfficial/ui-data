@@ -1,0 +1,92 @@
+<div class="page">
+  <header class="hero">
+    <div>
+      <span class="badge">Healthcare Business Analyst</span>
+      <h1>Healthcare Analytics Portfolio</h1>
+      <p class="subtitle">
+        Atlanta, GA · Graduation Date: Aug 2026 · Experience spanning pharmaceutical marketing analytics,
+        ROI optimization, and data-driven healthcare strategy.
+      </p>
+      <div class="hero-meta">
+        <div>
+          <h3>Magnus Pharma Pvt. Ltd.</h3>
+          <p>Kathmandu, Nepal · Apr 2018 - Nov 2023</p>
+        </div>
+        <div>
+          <h3>Herzing University</h3>
+          <p>Business Analyst · Jan 2024 - Aug 2026</p>
+        </div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h2>Research Focus</h2>
+      <p>
+        Data-driven healthcare decision-making with an emphasis on pharmaceutical market intelligence, patient
+        outcome analytics, and executive-ready insights for strategic planning.
+      </p>
+      <div class="focus-grid">
+        <div>
+          <h4>Therapeutic Switching</h4>
+          <p>SSRIs vs TCAs adherence and safety analysis.</p>
+        </div>
+        <div>
+          <h4>Patient Flow Analysis</h4>
+          <p>Seasonal and demographic drivers across chronic cohorts.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="grid two">
+    <div class="card">
+      <h2>Impact Highlights</h2>
+      <p class="section-subtitle">Key outcomes delivered across commercial analytics initiatives.</p>
+      <div class="chart-container">
+        <canvas id="impactChart"></canvas>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Market Growth Outlook</h2>
+      <p class="section-subtitle">
+        Comparative CAGR projections for targeted therapy segments versus the overall pharma market.
+      </p>
+      <div class="chart-container">
+        <canvas id="growthChart"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Experience Highlights</h2>
+    <div class="list">
+      <div class="list-item" *ngFor="let item of experienceHighlights">
+        <span></span>
+        <p>{{ item }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="grid three">
+    <div class="card" *ngFor="let skillGroup of skills">
+      <h3>{{ skillGroup.title }}</h3>
+      <div class="pill-list">
+        <span class="pill" *ngFor="let item of skillGroup.items">{{ item }}</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Project Experience</h2>
+    <div class="project-grid">
+      <div class="project-card" *ngFor="let project of projects">
+        <div>
+          <h3>{{ project.title }}</h3>
+          <p class="muted">{{ project.timeframe }}</p>
+        </div>
+        <ul>
+          <li *ngFor="let detail of project.details">{{ detail }}</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
